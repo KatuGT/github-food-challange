@@ -1,7 +1,7 @@
 .wrapper-buscador{
     background-image: url(../../assets/imagenes/backgroundImg.png);
-    background-position: top center;
-    background-size: contain;
+    background-position: center center;
+    background-size: cover;
     border-radius: 8px;
     margin: 20px 12px;
     display: flex;   
@@ -12,12 +12,29 @@
         width: 100%;
         display: flex;
         justify-content: stretch;
+        align-items: center;
         width: 100%;
+    }
+
+    & #bag-label-icon{
+        color: #B9BDCF;
+        margin-left: 17.5px;
+        line-height: 0;
     }
 
     & input{
         width: 100%;
         border: none;
+        padding: 1em;
+        
+    }
+
+    & input::placeholder{
+        color: #B9BDCF;
+        text-overflow: ellipsis;
+        font-family: 'Roboto';
+        font-size: 12px;
+        font-style: normal;
     }
     
     & .button-search{
