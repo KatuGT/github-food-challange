@@ -1,9 +1,11 @@
-import './App.css';
+import Buscador from './componentes/Buscador/Buscador';
+import Header from './componentes/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      holsa
+      <Header/>
+      <Buscador/>
     </div>
   );
 }
