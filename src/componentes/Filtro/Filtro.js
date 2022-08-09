@@ -21,6 +21,24 @@ const Filtro = () => {
             placeholder='City, state, zip code or country'
           />
         </form>
+        <form className="location-radiobtns">
+          <div className="country">
+            <input type="radio" id="london" name='country'/>
+            <label htmlFor="london">London</label>
+          </div>
+          <div className="country">
+            <input type="radio" id="amsterdam" name='country' />
+            <label htmlFor="amsterdam">Amsterdan</label>
+          </div>
+          <div className="country">
+            <input type="radio" id="newYork" name='country' />
+            <label htmlFor="newYork">New yowk</label>
+          </div>
+          <div className="country">
+            <input type="radio" id="berlin" name='country' />
+            <label htmlFor="berlin">Berlin</label>
+          </div>
+        </form>
       </div>
     </div>
   );

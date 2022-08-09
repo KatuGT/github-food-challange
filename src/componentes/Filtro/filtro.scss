@@ -81,4 +81,36 @@
             color: var(--clr-plchldr);
         }
     }
+
+    & .location-radiobtns{
+       margin: 27px 0 23px  1em;
+       display: flex;
+       flex-direction: column;
+       gap: 15.65px;
+
+       & div.country{
+        display: flex;
+        align-items: center;
+       }
+
+       & div.country input{
+        appearance: none;
+        border: 1px solid var(--clr-plchldr);
+        border-radius: 100vh;
+        height: 18px;
+        width: 18px;
+        margin-right: 12.5px;
+       }
+
+       & div.country label{
+        font-weight: 500;
+        color: #334680;
+       }
+
+       & div.country input:checked{
+        border-color: var(--clr-base);
+        box-shadow:0px 0px 0px 2px var(--clr-body) inset;
+        background-color: var(--clr-base);
+       }
+    }
 }

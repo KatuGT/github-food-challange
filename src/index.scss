@@ -9,10 +9,12 @@
 :root{
   --clr-base: #1E86FF;
   --clr-plchldr: #B9BDCF;
+  --clr-body: rgb(246, 247, 251);
+
 }
 
 body {
-  background-color: rgb(246, 247, 251);
+  background-color: var(--clr-body);
   font-family: Poppins;
   padding-inline: 10px;
 }
