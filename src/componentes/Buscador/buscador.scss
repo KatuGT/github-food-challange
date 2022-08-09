@@ -37,7 +37,7 @@
     }
 
     & input::placeholder{
-        color: #B9BDCF;
+        color: var(--clr-plchldr);
         text-overflow: ellipsis;
         font-family: 'Roboto';
         font-size: 12px;

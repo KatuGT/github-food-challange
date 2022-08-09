@@ -11,12 +11,12 @@ const Filtro = () => {
       <div className='wrapper-locacion'>
         <p className='location-title'>LOCATION</p>
         <form className='wrapper-input'>
-          <label htmlFor='search-job' id='world-label-icon'>
+          <label htmlFor='location' id='world-label-icon'>
             <BiWorld />
           </label>
           <input
             type='search'
-            id='search-job'
+            id='location'
             htmlFor='world-label-icon'
             placeholder='City, state, zip code or country'
           />

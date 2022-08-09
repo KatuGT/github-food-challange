@@ -1,6 +1,7 @@
 .wrapper-filtro{
-    margin-left: 14px;
+    margin-top: 29px;
     & .check-fulltime{
+        margin-left: 14px;
         display: flex;
         align-items: center;
         & input#fulltime{
@@ -36,6 +37,48 @@
             font-size: 14px;
             font-weight: 500;
             line-height: 0;
+        }
+    }
+
+    & .wrapper-locacion{
+        margin-top: 32px;
+        & .location-title{
+            font-weight: 700;
+            color: #B9BDCF;
+        }
+
+        & .wrapper-input{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            margin-top: 14px;
+            padding: 16px 14px;
+            border-radius: 4px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        & .wrapper-input:focus-within{
+            outline: 2px solid var(--clr-base);
+        }
+
+        & .wrapper-input #world-label-icon{
+            color: var(--clr-plchldr);
+            line-height: 0;
+            margin-right: 1em;
+        }
+
+        & .wrapper-input input#location{
+            width: 100%;
+            border: none;
+        }
+
+        & .wrapper-input input#location:focus{
+            outline: none;
+        }
+
+        & .wrapper-input input#location::placeholder{
+            color: var(--clr-plchldr);
         }
     }
 }
