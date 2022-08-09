@@ -28,11 +28,11 @@ const Filtro = () => {
           </div>
           <div className="country">
             <input type="radio" id="amsterdam" name='country' />
-            <label htmlFor="amsterdam">Amsterdan</label>
+            <label htmlFor="amsterdam">Amsterdam</label>
           </div>
           <div className="country">
             <input type="radio" id="newYork" name='country' />
-            <label htmlFor="newYork">New yowk</label>
+            <label htmlFor="newYork">New York</label>
           </div>
           <div className="country">
             <input type="radio" id="berlin" name='country' />
