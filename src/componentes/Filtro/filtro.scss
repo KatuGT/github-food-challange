@@ -65,7 +65,8 @@
         & .wrapper-input #world-label-icon{
             color: var(--clr-plchldr);
             line-height: 0;
-            margin-right: 1em;
+            margin-right: .8em;
+            font-size: 1.13em;
         }
 
         & .wrapper-input input#location{
@@ -79,6 +80,9 @@
 
         & .wrapper-input input#location::placeholder{
             color: var(--clr-plchldr);
+            font-size: 12px;
+            font-weight: 400;
+            font-family: "Roboto";
         }
     }
 
