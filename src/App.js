@@ -1,4 +1,5 @@
 import Buscador from './componentes/Buscador/Buscador';
+import Filtro from './componentes/Filtro/Filtro';
 import Header from './componentes/Header/Header';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <Header/>
       <Buscador/>
+      <Filtro/>
     </div>
   );
 }

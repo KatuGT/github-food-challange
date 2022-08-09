@@ -6,8 +6,13 @@
   box-sizing: border-box;
 }
 
+:root{
+  --clr-base: #1E86FF;
+}
+
 body {
-  background-color: #F6F7FB;
+  background-color: rgb(246, 247, 251);
   font-family: Poppins;
+  padding-inline: 10px;
 }
 

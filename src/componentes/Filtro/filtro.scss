@@ -1,0 +1,41 @@
+.wrapper-filtro{
+    margin-left: 14px;
+    & .check-fulltime{
+        display: flex;
+        align-items: center;
+        & input#fulltime{
+            margin-right: 12px;
+            appearance: none;
+            height: 18px;
+            width: 18px;
+            border: 1px solid #B9BDCF;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        & input#fulltime::after{
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f00c";
+            color: #fff;
+            position: absolute;
+            left: 2px;
+            top: 1px;
+            display: none;            
+        }
+
+        & input#fulltime:checked{
+            background-color: var(--clr-base);
+        }
+
+        & input#fulltime:checked::after {
+            display: block;
+        }
+
+        & label{
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 0;
+        }
+    }
+}
