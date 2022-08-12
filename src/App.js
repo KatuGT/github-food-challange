@@ -1,17 +1,15 @@
 import Buscador from './componentes/Buscador/Buscador';
-import Card from './componentes/Card/Card';
 import Filtro from './componentes/Filtro/Filtro';
 import Header from './componentes/Header/Header';
+import ListaCards from './componentes/ListaCards/ListaCards';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Buscador/>
-      <Filtro/>
-      <section className="wrapper-card">
-        <Card/>
-      </section>
+    <div className='App'>
+      <Header />
+      <Buscador />
+      <Filtro />
+      <ListaCards/>
     </div>
   );
 }
