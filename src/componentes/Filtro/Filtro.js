@@ -6,8 +6,10 @@ const Filtro = () => {
   const setQuery = useQueryChangeContext();
 
   const handleLocation = (e) => {
-    // console.log(e.target.id);
-    setQuery({ location: e.target.id });
+    setQuery((prevState) => ({
+      ...prevState,
+      location: e.target.value,
+    }));
   };
 
   return (
@@ -18,7 +20,7 @@ const Filtro = () => {
       </div>
       <div className='wrapper-locacion'>
         <p className='location-title'>LOCATION</p>
-        <form className='wrapper-input'>
+        <form className='wrapper-input' onChange={handleLocation}>
           <label htmlFor='location' id='world-label-icon'>
             <BiWorld />
           </label>
@@ -31,19 +33,24 @@ const Filtro = () => {
         </form>
         <form className='location-radiobtns' onChange={handleLocation}>
           <div className='country'>
-            <input type='radio' id='london' name='country' defaultChecked />
+            <input type='radio' id='london' name='country' value='london' />
             <label htmlFor='london'>London</label>
           </div>
           <div className='country'>
-            <input type='radio' id='amsterdam' name='country' />
+            <input
+              type='radio'
+              id='amsterdam'
+              name='country'
+              value='amsterdam'
+            />
             <label htmlFor='amsterdam'>Amsterdam</label>
           </div>
           <div className='country'>
-            <input type='radio' id='newYork' name='country' />
+            <input type='radio' id='newYork' name='country' value='new york' />
             <label htmlFor='newYork'>New York</label>
           </div>
           <div className='country'>
-            <input type='radio' id='berlin' name='country' />
+            <input type='radio' id='berlin' name='country' value='berlin' />
             <label htmlFor='berlin'>Berlin</label>
           </div>
         </form>
