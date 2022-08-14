@@ -1,0 +1,29 @@
+.aplicar {
+  & a.back-search {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--clr-base);
+    margin-top: 33px;
+    margin-bottom: 36px;
+    & span{
+        font-weight:500 ;
+    }
+  }
+
+  & .how-apply{
+    font-weight: 700;
+    color: var(--clr-plchldr);
+    margin-bottom: 16px;
+  }
+
+  & .apply-text{
+    color: var(--clr-secondary);
+    font-weight: 500;
+
+    & span{
+    color: var(--clr-baseh);
+
+    }
+  }
+}
