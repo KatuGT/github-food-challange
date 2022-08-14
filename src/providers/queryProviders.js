@@ -7,6 +7,7 @@ export const QueryProvider = ({ children }) => {
   const [query, setQuery] = useState({
     q: 'developer',
     location: 'london',
+    isfullTime: false,
   });
 
   return (

@@ -11,8 +11,11 @@ const ListaCards = () => {
 
   const dataTrabajo = useFech(actualURL);
   const listaTrabajos = dataTrabajo?.data?.data?.jobs_results;
+  const fullTimeJobs = listaTrabajos?.filter(trabajo => trabajo?.detected_extensions.schedule_type !== 'Full-time');
+  console.log(fullTimeJobs);
   return (
     <div className='wrapper_cards'>
+
       {listaTrabajos?.map((trabajo) => (
           <Card key={trabajo?.job_id}
             img={trabajo?.thumbnail}

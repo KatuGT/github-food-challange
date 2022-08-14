@@ -5,6 +5,13 @@ import { useQueryChangeContext } from '../../providers/queryProviders';
 const Filtro = () => {
   const setQuery = useQueryChangeContext();
 
+  const handleTime = (e) => {
+    setQuery((prevState) => ({
+      ...prevState,
+      isFullTime: e.target.checked,
+    }));
+  };
+
   const handleLocation = (e) => {
     setQuery((prevState) => ({
       ...prevState,
@@ -15,7 +22,7 @@ const Filtro = () => {
   return (
     <div className='wrapper-filtro'>
       <div className='check-fulltime'>
-        <input type='checkbox' id='fulltime' />
+        <input type='checkbox' onChange={handleTime} id='fulltime' />
         <label htmlFor='fulltime'>Full time</label>
       </div>
       <div className='wrapper-locacion'>
