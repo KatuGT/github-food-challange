@@ -3,3 +3,10 @@
     flex-direction: column;
     gap: 23px;
 }
+
+
+@media screen and (min-width: 1200px) {
+    .wrapper_cards{
+        flex-grow: 5;
+    }
+}

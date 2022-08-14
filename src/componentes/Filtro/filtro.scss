@@ -118,3 +118,10 @@
        }
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .wrapper-filtro{
+        flex-grow: 2;
+        margin-top: 12px;
+    }
+}
