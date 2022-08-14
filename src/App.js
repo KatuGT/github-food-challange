@@ -1,20 +1,18 @@
-import Buscador from './componentes/Buscador/Buscador';
-import Filtro from './componentes/Filtro/Filtro';
-import Header from './componentes/Header/Header';
-import ListaCards from './componentes/ListaCards/ListaCards';
-import Main from './componentes/Main/Main';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './paginas/Home';
+import InfoTrabajo from './paginas/InfoTrabajo';
 import { QueryProvider } from './providers/queryProviders';
 
 function App() {
   return (
     <QueryProvider>
       <div className='App'>
-        <Header />
-        <Buscador />
-        <Main>
-          <Filtro />
-          <ListaCards />
-        </Main>
+        <Router>
+          <Routes>
+            <Route path='/' index element={<Home />} />
+            <Route path='/info' index element={<InfoTrabajo />} />
+          </Routes>
+        </Router>
       </div>
     </QueryProvider>
   );

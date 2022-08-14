@@ -5,7 +5,6 @@ import './listaCards.scss';
 
 const ListaCards = () => {
   const useQuery = useQueryContext();
-  console.log(useQuery);
 
   const actualURL = `https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=google_jobs&api_key=f30043ba5541ffb1f98dec1d83e179af811d6d84c34caa525d80f0b82609202a&q=${useQuery.q}&location=${useQuery.location}`;
 

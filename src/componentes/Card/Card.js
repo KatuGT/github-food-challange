@@ -1,6 +1,7 @@
 import './card.scss';
 import { BiWorld } from 'react-icons/bi';
 import { FiClock } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import NotFound from '../../assets/imagenes/notfound.png';
 
 const Card = ({
@@ -12,7 +13,7 @@ const Card = ({
   postedAt,
 }) => {
   return (
-    <div className='card'>
+    <Link to='/' className='card'>
       <img src={!img ? NotFound : img} alt='logo de ' />
       <div className='info-wrapper'>
         <div className='columna-uno'>
@@ -30,7 +31,7 @@ const Card = ({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
