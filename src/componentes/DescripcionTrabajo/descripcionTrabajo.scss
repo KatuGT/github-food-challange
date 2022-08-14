@@ -1,0 +1,53 @@
+.wrapper-descripcion {
+  color: var(--clr-secondary);
+  & .info {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--clr-plchldr);
+    font-size: 12px;
+    text-align: 0;
+    margin-top: 10px;
+  }
+
+  & .icon-info {
+    font-size: 1.5em;
+  }
+
+  .position {
+    & h2 {
+      margin-top: 36px;
+      font-weight: 700;
+    }
+    & .tiempo {
+      font-family: 'Roboto';
+      font-weight: 700;
+      font-size: 12px;
+      padding: 5px 8px;
+      border: 1px solid #334680;
+      border-radius: 4px;
+      display: inline;
+    }
+  }
+
+  & .wrapper-company-info {
+    display: flex;
+    gap: 12px;
+    margin: 37px 0 34px 0 ;
+
+    & img {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+    }
+
+    & .company-name{
+        & > p{
+            font-family: 'roboto';
+            font-size:18px ;
+            font-weight:700 ;
+            line-height: none;
+        }
+    }
+  }
+}
