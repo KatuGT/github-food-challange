@@ -1,3 +1,4 @@
+import axios from 'axios';
 import useFech from '../../hook/useFech';
 import { useQueryContext } from '../../providers/queryProviders';
 import Card from '../Card/Card';
@@ -6,23 +7,34 @@ import './listaCards.scss';
 const ListaCards = () => {
   const useQuery = useQueryContext();
 
-  const actualURL = `https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=google_jobs&api_key=f30043ba5541ffb1f98dec1d83e179af811d6d84c34caa525d80f0b82609202a&q=${useQuery.q}&location=${useQuery.location}`;
+  const config = {
+    params: { from: '0', size: '20', tags: 'under_30_minutes' },
+    headers: {
+      'X-RapidAPI-Key': '88a864ae53msh999934775aef7fcp1fd42djsn78b996068f97',
+      'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
+    },
+  };
 
-  const dataTrabajo = useFech(actualURL);
-  const listaTrabajos = dataTrabajo?.data?.data?.jobs_results;
-  const fullTimeJobs = listaTrabajos?.filter(trabajo => trabajo?.detected_extensions.schedule_type !== 'Full-time');
-  console.log(fullTimeJobs);
+  const actualURL = 'https://tasty.p.rapidapi.com/recipes/list';
+
+  const dataReceta = useFech(actualURL, config);
+  const listaRecetas = dataReceta?.data?.data?.results;
+  console.log(listaRecetas);
+
   return (
     <div className='wrapper_cards'>
 
-      {listaTrabajos?.map((trabajo) => (
-          <Card key={trabajo?.job_id}
-            img={trabajo?.thumbnail}
-            companyName={trabajo?.company_name}
-            position={trabajo?.title}
-            scheduleType={trabajo?.detected_extensions?.schedule_type}
-            location={trabajo?.location}
-            postedAt={trabajo?.detected_extensions?.posted_at}
+      {listaRecetas?.map((receta) => (
+          <Card
+            to={receta?.name}
+            key={receta?.name}
+            img={receta?.thumbnail_url}
+            companyName={receta?.seo_title}
+            position={receta?.description}
+            scheduleType={receta?.yields}
+            location={receta?.credits[0]?.name}
+            postedAt={receta?.total_time_tier?.display_tier}
+            id={receta?.name}
           />
       ))}
     </div>

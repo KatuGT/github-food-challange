@@ -1,9 +1,21 @@
 import './descripcionTrabajo.scss';
 import { BiWorld } from 'react-icons/bi';
 import { FiClock } from 'react-icons/fi';
+import useFech from '../../hook/useFech';
 import Logo from '../../assets/imagenes/logoGoogle.jpg';
+import { useQueryContext } from '../../providers/queryProviders';
 
 const DescripcionTrabajo = () => {
+  const useQuery = useQueryContext();
+  const actualURL = `https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=google_jobs&api_key=f30043ba5541ffb1f98dec1d83e179af811d6d84c34caa525d80f0b82609202a&q=${useQuery.q}`;
+  console.log(useQuery);
+  const listaTrabajos = useFech(actualURL);
+
+  console.log(listaTrabajos?.data?.data);
+  // const todosTrabajos = trabajoParticular?.data?.data?.jobs_results;
+  // const trabajo = todosTrabajos?.filter(trabajoUno => trabajoUno?.job_id === id);
+  // console.log(trabajo);
+
   return (
     <div className='wrapper-descripcion'>
       <div className='position'>
