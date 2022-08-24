@@ -2,7 +2,7 @@ import './header.scss';
 
 const Header = () => {
   return (
-    <p id='main-title'><span>Github</span> Jobs</p>
+    <p id='main-title'><span>Github</span> Food</p>
   );
 };
 
