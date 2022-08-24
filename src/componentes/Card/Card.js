@@ -1,5 +1,5 @@
 import './card.scss';
-import { BiWorld } from 'react-icons/bi';
+import { FaPenFancy } from 'react-icons/fa';
 import { FiClock } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import NotFound from '../../assets/imagenes/notfound.png';
@@ -8,11 +8,11 @@ import { useQueryChangeContext } from '../../providers/queryProviders';
 const Card = ({
   to,
   img,
-  companyName,
-  position,
-  scheduleType,
-  location,
-  postedAt,
+  recipeName,
+  description,
+  yields,
+  credits,
+  totalTime,
   id,
 }) => {
   const setQuery = useQueryChangeContext();
@@ -24,20 +24,20 @@ const Card = ({
   };
   return (
     <Link to={`info/${to}`} className='card' onClick={() => handleClick(id)}>
-      <img src={!img ? NotFound : img} alt={`info/${companyName}`} />
+      <img src={!img ? NotFound : img} alt={`info/${recipeName}`} />
       <div className='info-wrapper'>
         <div className='columna-uno'>
-          <h4 className='nombre-empresa'>{companyName}</h4>
-          <p className='puesto'>{position}</p>
-          <p className='tiempo'>{scheduleType}</p>
+          <h4 className='nombre-receta'>{recipeName}</h4>
+          <p className='descripcion'>{description}</p>
+          <p className='tiempo'>{yields}</p>
         </div>
         <div className='info-extra columna-dos'>
           <div className='info'>
-            <BiWorld className='icon-info' /> <p className='pais'>{location}</p>
+            <FaPenFancy className='icon-info' /> <p className='pais'>{credits}</p>
           </div>
           <div className='info'>
             <FiClock className='icon-info' />
-            <p className='fecha-posteo'>{postedAt}</p>
+            <p className='fecha-posteo'>{totalTime}</p>
           </div>
         </div>
       </div>

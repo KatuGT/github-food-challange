@@ -2,11 +2,16 @@
     display: flex;
     flex-direction: column;
     gap: 23px;
+
+    & .cargando{
+        display: grid;
+        place-items: center;
+    }
 }
 
 
 @media screen and (min-width: 1200px) {
     .wrapper_cards{
-        flex-grow: 5;
+        flex: 9;
     }
 }
