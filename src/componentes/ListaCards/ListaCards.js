@@ -21,7 +21,6 @@ const ListaCards = () => {
 
   const dataReceta = useFech(actualURL, config);
   const listaRecetas = dataReceta?.data?.data?.results;
-  console.log(listaRecetas);
 
   return (
     <div className='wrapper_cards'>

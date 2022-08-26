@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const useFech = (url, config) => {
+const useFech = (url, config = '') => {
   const [dataFetch, setDataFetch] = useState({
     loading: true,
     error: null,
