@@ -1,5 +1,5 @@
 import './filtro.scss';
-import { BiWorld } from 'react-icons/bi';
+import { AiFillTags } from 'react-icons/ai';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { chain } from 'lodash';
 import { useRef } from 'react';
@@ -58,20 +58,19 @@ const Filtro = () => {
         <input type='checkbox' onChange={handleTime} id='fulltime' />
         <label htmlFor='fulltime'>Full time</label>
       </div>
-      <div className='wrapper-locacion'>
-        <p className='location-title'>LOCATION</p>
+      <div className='wrapper-tags'>
+        <p className='tags-title'>TAGS</p>
         <form className='wrapper-input' onChange={handleLocation}>
-          <label htmlFor='location' id='world-label-icon'>
-            <BiWorld />
+          <label htmlFor='tags' id='tags-label-icon'>
+            <AiFillTags />
           </label>
           <input
             type='search'
-            id='location'
-            htmlFor='world-label-icon'
+            id='tags'
             placeholder='City, state, zip code or country'
           />
         </form>
-        <form className='location-radiobtns' onChange={handleLocation}>
+        <form className='tags-list-wrapper' onChange={handleLocation}>
           {categorias?.sort().map((categoria, index) => (
             <ul className='categorias' key={index}>
               <li className='titulo-categoria' onClick={mostrarItems}>
