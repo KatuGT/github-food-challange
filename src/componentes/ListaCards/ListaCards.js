@@ -10,7 +10,7 @@ const ListaCards = () => {
   const key = process.env.REACT_APP_SECRET_KEY;
 
   const config = {
-    params: { from: '0', size: '20', tags: 'under_30_minutes' },
+    params: { from: '0', size: '20', tags: `${useQuery.tags}` },
     headers: {
       'X-RapidAPI-Key': key,
       'X-RapidAPI-Host': 'tasty.p.rapidapi.com',

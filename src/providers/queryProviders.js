@@ -7,10 +7,7 @@ const queryChangeContext = createContext();
 
 export const QueryProvider = ({ children }) => {
   const [query, setQuery] = useState({
-    q: 'developer',
-    location: 'london',
-    isfullTime: false,
-    idJob: null,
+    tags: 'easy',
   });
 
   useEffect(() => {

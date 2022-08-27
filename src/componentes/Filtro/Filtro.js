@@ -34,7 +34,6 @@ const Filtro = () => {
 
   const { data } = useFecth('https://tasty.p.rapidapi.com/tags/list', config);
   const tags = data?.data?.results;
-
   const categorias = chain(tags).groupBy('type').toPairs().value();
 
   const listado = useRef();
@@ -48,6 +47,10 @@ const Filtro = () => {
     } else if (listaContenedoratitulo) {
       target.nextElementSibling.classList.toggle('mostrar');
     }
+  };
+
+  const handleTags = (e) => {
+    console.log(e);
   };
   return (
     <div className='wrapper-filtro'>
@@ -71,8 +74,8 @@ const Filtro = () => {
         <form className='location-radiobtns' onChange={handleLocation}>
           {categorias?.sort().map((categoria, index) => (
             <ul className='categorias' key={index}>
-              <li className='titulo-categoria' onClick={mostrarItems} >
-                <p>{categoria[0].replace('_', ' ')}</p>
+              <li className='titulo-categoria' onClick={mostrarItems}>
+                <p>{categoria[0]?.replace('_', ' ')}</p>
                 <IoMdArrowDropdown />
               </li>
               <ul className='lista-categoria' ref={listado}>
@@ -84,8 +87,9 @@ const Filtro = () => {
                     <li className='nombre-categoria' key={indice} >
                       <input
                         type='checkbox'
-                        id={nombre.display_name.replace(' ', '_')}
-                        value={nombre.display_name}
+                        id={nombre?.display_name?.replace(' ', '_')}
+                        value={nombre?.name}
+                        onClick={handleTags}
                       />
                       <label
                         htmlFor={nombre.display_name.replace(' ', '_')}
