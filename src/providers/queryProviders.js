@@ -8,6 +8,7 @@ const queryChangeContext = createContext();
 export const QueryProvider = ({ children }) => {
   const [query, setQuery] = useState({
     tags: 'easy',
+    showTagList: true,
   });
 
   useEffect(() => {

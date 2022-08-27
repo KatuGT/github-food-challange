@@ -3,16 +3,17 @@ import { AiFillTags } from 'react-icons/ai';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { chain } from 'lodash';
 import { useRef } from 'react';
-import { useQueryChangeContext } from '../../providers/queryProviders';
+import { useQueryChangeContext, useQueryContext } from '../../providers/queryProviders';
 import useFecth from '../../hook/useFech';
 
 const Filtro = () => {
   const setQuery = useQueryChangeContext();
+  const useQuery = useQueryContext();
 
-  const handleTime = (e) => {
+  const handleShowList = (e) => {
     setQuery((prevState) => ({
       ...prevState,
-      isFullTime: e.target.checked,
+      showTagList: e.target.checked,
     }));
   };
 
@@ -55,8 +56,8 @@ const Filtro = () => {
   return (
     <div className='wrapper-filtro'>
       <div className='check-fulltime'>
-        <input type='checkbox' onChange={handleTime} id='fulltime' />
-        <label htmlFor='fulltime'>Full time</label>
+        <input type='checkbox' checked={useQuery.showTagList} onChange={handleShowList} id='fulltime' />
+        <label htmlFor='fulltime'>Show tag´s list</label>
       </div>
       <div className='wrapper-tags'>
         <p className='tags-title'>TAGS</p>
@@ -67,7 +68,7 @@ const Filtro = () => {
           <input
             type='search'
             id='tags'
-            placeholder='City, state, zip code or country'
+            placeholder='Easy, African, under 40 minutes...'
           />
         </form>
         <form className='tags-list-wrapper' onChange={handleLocation}>
